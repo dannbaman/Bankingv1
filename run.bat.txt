@@ -1,0 +1,3 @@
+C:\Users\danieltkachenko\eclipse-workspace\inetBankingV1_Morning
+mvn clean install
+
