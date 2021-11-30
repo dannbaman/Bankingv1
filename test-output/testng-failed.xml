@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.inetbanking.testCases.TC_AddCustomerTest_003">
+      <class name="com.inetbanking.testCases.HandleBrowserWindows">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addNewCustomer"/>
+          <include name="BrokenLinks"/>
         </methods>
-      </class> <!-- com.inetbanking.testCases.TC_AddCustomerTest_003 -->
+      </class> <!-- com.inetbanking.testCases.HandleBrowserWindows -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

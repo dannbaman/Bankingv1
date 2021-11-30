@@ -14,20 +14,6 @@
           <include name="loginDDT" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.inetbanking.testCases.TC_loginDDD_002 -->
-      <class name="com.inetbanking.testCases.TC_LoginTest_001">
-        <methods>
-          <include name="loginTest"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.inetbanking.testCases.TC_LoginTest_001 -->
-      <class name="com.inetbanking.testCases.TC_AddCustomerTest_003">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addNewCustomer"/>
-        </methods>
-      </class> <!-- com.inetbanking.testCases.TC_AddCustomerTest_003 -->
     </classes>
   </test> <!-- BankingApp Test(failed) -->
 </suite> <!-- Failed suite [InetBanking] -->
