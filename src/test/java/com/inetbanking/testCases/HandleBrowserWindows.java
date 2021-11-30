@@ -77,9 +77,8 @@ public class HandleBrowserWindows {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-			
+		
+		
 		}
 		System.out.println("Numbwe of broken links is " + brokenLinks);
 		
