@@ -1,20 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-30T19:36:10 GMT+02:00" name="Default suite" finished-at="2021-11-30T19:36:17 GMT+02:00" duration-ms="6978">
+  <suite started-at="2021-12-01T00:01:41 GMT+02:00" name="Default suite" finished-at="2021-12-01T00:01:46 GMT+02:00" duration-ms="4482">
     <groups>
     </groups>
-    <test started-at="2021-11-30T19:36:10 GMT+02:00" name="Default test" finished-at="2021-11-30T19:36:17 GMT+02:00" duration-ms="6978">
+    <test started-at="2021-12-01T00:01:41 GMT+02:00" name="Default test" finished-at="2021-12-01T00:01:46 GMT+02:00" duration-ms="4482">
       <class name="com.inetbanking.testCases.HandleBrowserWindows">
-        <test-method signature="BrokenLinks()[pri:0, instance:com.inetbanking.testCases.HandleBrowserWindows@625732]" started-at="2021-11-30T19:36:10 GMT+02:00" name="BrokenLinks" finished-at="2021-11-30T19:36:17 GMT+02:00" duration-ms="6920" status="FAIL">
-          <exception class="java.lang.ClassCastException">
+        <test-method signature="tableHandling()[pri:0, instance:com.inetbanking.testCases.HandleBrowserWindows@51dcb805]" started-at="2021-12-01T00:01:41 GMT+02:00" name="tableHandling" finished-at="2021-12-01T00:01:46 GMT+02:00" duration-ms="4435" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[class sun.net.www.protocol.mailto.MailToURLConnection cannot be cast to class java.net.HttpURLConnection (sun.net.www.protocol.mailto.MailToURLConnection and java.net.HttpURLConnection are in module java.base of loader 'bootstrap')]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr[1]/td[0]"}
+  (Session info: chrome=96.0.4664.45)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LPWO90MNMS', ip: '198.22.162.58', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50523}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d096b802f715630fe6c9507e9d8ebf71
+*** Element info: {Using=xpath, value=//table/tbody/tr[1]/td[0]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class sun.net.www.protocol.mailto.MailToURLConnection cannot be cast to class java.net.HttpURLConnection (sun.net.www.protocol.mailto.MailToURLConnection and java.net.HttpURLConnection are in module java.base of loader 'bootstrap')
-at com.inetbanking.testCases.HandleBrowserWindows.BrokenLinks(HandleBrowserWindows.java:65)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr[1]/td[0]"}
+  (Session info: chrome=96.0.4664.45)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LPWO90MNMS', ip: '198.22.162.58', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50523}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d096b802f715630fe6c9507e9d8ebf71
+*** Element info: {Using=xpath, value=//table/tbody/tr[1]/td[0]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.inetbanking.testCases.HandleBrowserWindows.tableHandling(HandleBrowserWindows.java:102)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -45,10 +76,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BrokenLinks -->
+        </test-method> <!-- tableHandling -->
       </class> <!-- com.inetbanking.testCases.HandleBrowserWindows -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

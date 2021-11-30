@@ -84,5 +84,26 @@ public class HandleBrowserWindows {
 		
 		driver.quit();
 	}
+	@Test
+	public void tableHandling()
+	{
+		System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+		driver = new ChromeDriver();
+		
+		driver.get("http://ratings.fide.com");
+		int rows = driver.findElements(By.xpath("//table/tbody/tr")).size();
+		System.out.println(rows);
+		int cols = driver.findElements(By.xpath("//table/thead/tr/th")).size();
+		System.out.println(cols);
+		for (int i = 1; i <= rows; i++) 
+		{
+			for (int c = 1; c <= cols; c++) 
+			{
+				String data = driver.findElement(By.xpath("//table/tbody/tr["+i+"]/td["+c+"]")).getText();
+				System.out.println(data);
+			}
+		}
+		driver.quit();
+	}
 
 }
