@@ -5,7 +5,7 @@
     <classes>
       <class name="com.inetbanking.testCases.HandleBrowserWindows">
         <methods>
-          <include name="BrokenLinks"/>
+          <include name="tableHandling"/>
         </methods>
       </class> <!-- com.inetbanking.testCases.HandleBrowserWindows -->
     </classes>

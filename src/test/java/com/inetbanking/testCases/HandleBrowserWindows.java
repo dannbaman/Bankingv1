@@ -4,11 +4,14 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -95,15 +98,40 @@ public class HandleBrowserWindows {
 		System.out.println(rows);
 		int cols = driver.findElements(By.xpath("//table/thead/tr/th")).size();
 		System.out.println(cols);
-		for (int i = 1; i <= rows; i++) 
+		/*
+		 * for (int i = 1; i <= rows; i++) { for (int c = 1; c <= cols; c++) { String
+		 * data =
+		 * driver.findElement(By.xpath("//table/tbody/tr["+i+"]/td["+c+"]")).getText();
+		 * System.out.println(data + "      "); } }
+		 */
+		
+		for (int r = 1; r <= rows; r++) 
 		{
-			for (int c = 1; c <= cols; c++) 
+			String rank = driver.findElement(By.xpath("//table/tbody/tr["+r+"]/td[1]")).getText();
+			if(rank.equals("100"))
 			{
-				String data = driver.findElement(By.xpath("//table/tbody/tr["+i+"]/td["+c+"]")).getText();
-				System.out.println(data);
+				String name = driver.findElement(By.xpath("//table/tbody/tr["+r+"]/td[2]")).getText();
+				String country = driver.findElement(By.xpath("//table/tbody/tr["+r+"]/td[3]")).getText();
+				System.out.println(name+" " + country);
 			}
-		}
-		driver.quit();
+		
 	}
+		driver.quit();
 
+	}
+	@Test
+	public void ManageWait()
+	{
+		System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+		driver = new ChromeDriver();
+		
+		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
+		
+		//implicit wait
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.findElement(By.name("q")).sendKeys("Selenium");
+		driver.findElement(By.name("q")).sendKeys(Keys.RETURN);
+		
+	}
 }
