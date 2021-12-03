@@ -15,6 +15,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.inetbanking.utilities.ReadConfig;
@@ -119,6 +121,7 @@ public class HandleBrowserWindows {
 		driver.quit();
 
 	}
+	
 	@Test
 	public void ManageWait()
 	{
@@ -132,6 +135,64 @@ public class HandleBrowserWindows {
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.findElement(By.name("q")).sendKeys("Selenium");
 		driver.findElement(By.name("q")).sendKeys(Keys.RETURN);
-		
+		driver.findElement(By.xpath("//h3[text()='Selenium']")).click();
+		WebDriverWait mywait = new WebDriverWait(driver, 3);
+		WebElement element = mywait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[text()='Selenium']")));
+		element.click();
 	}
-}
+	@Test
+	public void DatePicker() throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+		driver = new ChromeDriver();
+		
+		driver.get("http://www.redbus.in/");
+		driver.manage().window().maximize();
+		
+		String year ="2022";
+		String month ="July";
+		String date = "10";
+		
+		driver.findElement(By.xpath("//input[@id='onward_cal']")).click();
+		while(true)
+		{
+			String monthyear = driver.findElement(By.xpath("//td[@class='monthTitle']")).getText();
+			String arr[]=monthyear.split(" ");
+			String mon = arr[0];
+			String yr = arr[1];
+			Thread.sleep(2000);
+			if(mon.equalsIgnoreCase(month) && yr.equals(year))
+			{
+				break;
+			}
+			else
+			{
+				driver.findElement(By.xpath("//td[@class='next']")).click();
+			}
+		}
+		List<WebElement> alldates = driver.findElements(By.xpath("//table[@class='rb-monthTable first last']//td"));
+		System.out.println(alldates.size());
+		for(WebElement ele:alldates)
+		{
+			String dt=ele.getText();
+			if(dt.equals(date))
+			{
+				ele.click();
+				break;
+			}
+		}
+		driver.quit();
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+

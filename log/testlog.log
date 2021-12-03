@@ -281,3 +281,10 @@
 2021-11-29 01:16:44,248 - ebanking -INFO - Providing Customer details....
 2021-11-29 01:16:48,477 - ebanking -INFO - Validation started
 2021-11-29 01:16:48,510 - ebanking -INFO - test case passed....
+2021-12-03 00:25:38,175 - ebanking -INFO - username provided
+2021-12-03 00:25:38,261 - ebanking -INFO - Password provided
+2021-12-03 00:25:38,629 - ebanking -INFO - clicked submit
+2021-12-03 00:25:41,651 - ebanking -INFO - Login passed
+2021-12-03 00:25:45,264 - ebanking -INFO - username provided
+2021-12-03 00:25:45,343 - ebanking -INFO - Password provided
+2021-12-03 00:25:45,557 - ebanking -INFO - clicked submit

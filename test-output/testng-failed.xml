@@ -5,7 +5,8 @@
     <classes>
       <class name="com.inetbanking.testCases.HandleBrowserWindows">
         <methods>
-          <include name="tableHandling"/>
+          <include name="ManageWait"/>
+          <include name="BrokenLinks"/>
         </methods>
       </class> <!-- com.inetbanking.testCases.HandleBrowserWindows -->
     </classes>
